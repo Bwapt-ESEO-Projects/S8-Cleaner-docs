@@ -1,0 +1,66 @@
+% ========= KEY DEFINITIONS =========
+\define@key{CU}{title}{\def\CU@title{#1}}
+\define@key{CU}{resume}{\def\CU@resume{#1}}
+\define@key{CU}{portee}{\def\CU@portee{#1}}
+\define@key{CU}{niveau}{\def\CU@niveau{#1}}
+\define@key{CU}{acteursd}{\def\CU@acteursd{#1}}
+\define@key{CU}{acteursi}{\def\CU@acteursi{#1}}
+\define@key{CU}{preconditions}{\def\CU@preconditions{#1}}
+\define@key{CU}{garantiesuccès}{\def\CU@garantiesuccès{#1}}
+\define@key{CU}{garantieminimale}{\def\CU@garantieminimale{#1}}
+\define@key{CU}{scenario}{\def\CU@scenario{#1}}
+\define@key{CU}{variantes}{\def\CU@variantes{#1}}
+\define@key{CU}{extensions}{\def\CU@extensions{#1}}
+\define@key{CU}{infos}{\def\CU@infos{#1}}
+
+% ========= KEY DEFAULTS =========
+\setkeys{CU}{
+    title=,
+    resume=,
+    portee=,
+    niveau=,
+    acteursd=,
+    acteursi=,
+    preconditions=,
+    garantiesuccès=,
+    garantieminimale=,
+    scenario=,
+    variantes=,
+    extensions=,
+    infos=
+}
+
+\newcommand{\CU}[1]{
+    \begingroup
+    \setkeys{CU}{#1}% Set new keys
+    \begin{longtable}{|l| >{\raggedright\arraybackslash}p{0.75\textwidth}|}
+            \hline
+            Titre & \textbf{\CU@title} \\
+            \hline
+            Résumé & \CU@resume \\
+            \hline
+            Portée & \CU@portee \\
+            \hline
+            Niveau & \CU@niveau \\
+            \hline
+            Acteurs directs & \CU@acteursd \\
+            \hline
+            Acteurs indirects & \CU@acteursi \\
+            \hline
+            Préconditions & \CU@preconditions \\
+            \hline
+            Garantie de succès & \CU@garantiesuccès \\
+            \hline
+            Garantie minimale & \CU@garantieminimale \\
+            \hline
+            Scénario nominal & \CU@scenario \\
+            \hline
+            Variantes & \CU@variantes \\
+            \hline
+            Extensions & \CU@extensions \\
+            \hline
+            Informations complémentaires & \CU@infos \\
+            \hline
+        \end{longtable}
+    \endgroup
+}

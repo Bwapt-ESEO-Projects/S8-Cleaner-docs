@@ -1,0 +1,46 @@
+\documentclass[a4paper]{article}
+
+\input{utils/setup.tex}
+
+%---------------------------- DEBUT DU DOCUMENT -----------------------------%
+
+\begin{document}
+
+\begin{titlepage}
+
+    \begin{center}
+        \textsc{\@title}
+    \end{center}
+
+\end{titlepage}
+
+\fancyhead[L]{\includegraphics[scale=0.2]{data/logo-eseo.png}}
+\fancyhead[C]{\Module}
+\fancyfoot[R]{\thepage}
+
+\newpage
+
+\tableofcontents
+
+\newpage
+
+\include{pages/versions}
+
+\newpage
+
+\include{pages/introduction}
+
+\newpage
+
+\input{utils/func/cu_func.tex}
+\include{pages/description}
+
+\newpage
+
+\include{pages/exigences}
+
+\newpage
+
+\include{pages/dictionnaire}
+
+\end{document}

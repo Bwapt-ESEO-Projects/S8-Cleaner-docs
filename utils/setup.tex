@@ -1,0 +1,49 @@
+%----------------------SETUP--------------------------%
+
+%Packages
+\usepackage[T1]{fontenc}
+\usepackage[utf8]{inputenc}
+\usepackage[french]{babel}
+\usepackage[top=1.5cm,bottom=1.5cm,left=2cm,right=2cm,headsep=50pt,includeheadfoot]{geometry}
+\usepackage{graphicx}
+\usepackage{caption}
+\usepackage{listings}
+\usepackage{color}
+\usepackage[table]{xcolor}
+\usepackage{fancyhdr}
+\usepackage{hyperref}
+\usepackage{comment}
+\usepackage{multirow}
+\usepackage{amssymb}
+\usepackage{tabularx, ragged2e, array, booktabs}
+\usepackage{arrayjobx}
+\usepackage{pgffor}
+\usepackage{keyval}
+\usepackage{enumitem}
+\usepackage{longtable}
+\usepackage{float}
+
+\edef\restoreparindent{\parindent=\the\parindent\relax}
+\usepackage{parskip}
+\restoreparindent
+
+%Formatage de la page
+\setlength{\headheight}{39.19241pt}
+\addtolength{\topmargin}{-27.19241pt}
+\pagestyle{fancy}
+\fancyhf{}
+
+\newcolumntype{Y}{>{\centering\arraybackslash}X} % for centering tables in tabularx
+\def\tabularxcolumn#1{m{#1}}
+
+\renewcommand{\arraystretch}{1.5}
+\input{utils/values.tex}
+
+%Définition de la page de garde
+\title{\LARGE{\Title}}
+\author{\Subtitle}
+\date{\today}
+\makeatletter
+
+\definecolor{darkWhite}{rgb}{0.94,0.94,0.94}
+
