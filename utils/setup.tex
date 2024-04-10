@@ -4,7 +4,7 @@
 \usepackage[T1]{fontenc}
 \usepackage[utf8]{inputenc}
 \usepackage[french]{babel}
-\usepackage[top=1.5cm,bottom=1.5cm,left=2cm,right=2cm,headsep=50pt,includeheadfoot]{geometry}
+\usepackage[top=1.5cm,bottom=1.5cm,left=1cm,right=1.5cm,headsep=50pt,includeheadfoot]{geometry}
 \usepackage{graphicx}
 \usepackage{caption}
 \usepackage{listings}
@@ -28,10 +28,9 @@
 \restoreparindent
 
 %Formatage de la page
-\setlength{\headheight}{39.19241pt}
-\addtolength{\topmargin}{-27.19241pt}
 \pagestyle{fancy}
-\fancyhf{}
+\fancyhead[C]{\rule{.5\textwidth}{4\baselineskip}}% Add something BIG in the header
+\setlength{\headheight}{52pt}% ...at least 51.60004pt
 
 \newcolumntype{Y}{>{\centering\arraybackslash}X} % for centering tables in tabularx
 \def\tabularxcolumn#1{m{#1}}
